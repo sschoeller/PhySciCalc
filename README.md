@@ -1,2 +1,2 @@
 # PhySciCalc
-A physical scientist's calculation tool
+An expanded scientific calculator for physical science
