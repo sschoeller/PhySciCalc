@@ -1,3 +1,4 @@
+#***********************************************************************
 # calcModes.py
 # Copyright (C) 2018 Scott Schoeller (sschoellerSTEM)
 #
@@ -11,7 +12,8 @@
 # MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 # GNU General Public License for more details.
 # You should have received a copy of the GNU General Public License
-# along with PhySciCalc.  If not, see <https://www.gnu.org/licenses/>. 
+# along with PhySciCalc.  If not, see <https://www.gnu.org/licenses/>.
+#***********************************************************************
 import numpy
 def arith(mode):
     '''arith(mode) computes the arithmetic operations 
