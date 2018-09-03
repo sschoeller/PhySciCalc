@@ -15,6 +15,7 @@
 # along with PhySciCalc.  If not, see <https://www.gnu.org/licenses/>.
 #***********************************************************************
 import numpy
+from ext import *
 def arith(mode):
     '''arith(mode) computes the arithmetic operations 
     addition (mode= add), substraction (mode= sub), 
