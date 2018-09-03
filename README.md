@@ -4,7 +4,7 @@ An expanded scientific calculator for physical science
 Requires: Python 3.x, numpy and standalone f2py wrapper
 
 ## f2py wrapper usage for Fortran extension module
-sschoellerSTEM tested the wrapper and intends to integrate ext_mod.f90 as follows: 
+sschoellerSTEM tested the wrapper and integrated ext_mod.f90 as follows: 
 
 1. f2py -c ext_mod.f90 -m ext
 
