@@ -1,0 +1,34 @@
+!**********************************************************************
+! ext_mod.f90
+! Copyright (C) 2018 Scott Schoeller (sschoellerSTEM)
+!
+! This file is part of PhySciCalc
+! PhySciCalc is free software: you can redistribute it and/or modify
+! it under the terms of the GNU General Public License as published by
+! the Free Software Foundation, either version 3 of the License, or
+! (at your option) any later version.
+! PhySciCalc is distributed in the hope that it will be useful,
+! but WITHOUT ANY WARRANTY; without even the implied warranty of
+! MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+! GNU General Public License for more details.
+! You should have received a copy of the GNU General Public License
+! along with PhySciCalc.  If not, see <https://www.gnu.org/licenses/>.
+!**********************************************************************
+MODULE ext_mod
+
+implicit none
+
+contains
+
+function gmol(grams, MW) ! g->mol conversions
+  real :: gmol
+  
+  real :: MW ! molecular weight
+  real :: grams ! grams of material
+  real :: result ! result of calculation
+
+  result = grams/MW
+  write (*,*) result
+end function gmol
+
+END MODULE ext_mod
