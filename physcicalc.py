@@ -17,7 +17,7 @@
 #**********************************************************************
 import calcModes
 
-def main():
+def run():
     # prompt for mode or mode listing
     mode = ''
     while mode != 'e':
@@ -29,11 +29,11 @@ def main():
             print('\tsinh, cosh, tanh')
             #print('\tgmol (g/mol conversion)')
             #print('\tre (relatevistic rest energy)')
-        
+
         elif (mode == 'add' or mode == 'sub' or mode == 'mult' or mode == 'div' or mode == 'sqrt'):
             print(calcModes.arith(mode))
-        
+
         elif (mode == 'sin' or mode == 'cos' or mode == 'tan' or mode == 'cot' or mode == 'sec' or mode == 'csc'):
             print(calcModes.trig(mode))
 
-main()
+run()
