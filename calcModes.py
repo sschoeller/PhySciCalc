@@ -16,10 +16,11 @@
 #***********************************************************************
 import numpy
 from ext import *
+
 def arith(mode):
-    '''arith(mode) computes the arithmetic operations 
-    addition (mode= add), substraction (mode= sub), 
-    multiplication (mode= mult), division (mode= div), 
+    '''arith(mode) computes the arithmetic operations
+    addition (mode= add), substraction (mode= sub),
+    multiplication (mode= mult), division (mode= div),
     square root (mode= sqrt)'''
     done = '' # dummy variable
     num = []
@@ -28,13 +29,13 @@ def arith(mode):
         while done == '':
             try:
                 numio = float(input('Type a non-zero number to add or simply enter 0 to compute and exit: '))
-                if numio != 0.0: # adding anything to 0 does not affect the final result 
+                if numio != 0.0: # adding anything to 0 does not affect the final result
                     num.append(numio)
                 else:
                     break
             except ValueError:
                 continue # handles input that can't be converted
-            
+
         for number in num:
                 numio = numio + number
         return numio
@@ -57,7 +58,7 @@ def trig(mode):
             return 'ERROR: invalid input!'
             # if ValueError *NOT* encountered
         return (numpy.cos(numio))
-        
+
     elif mode == 'tan':
         try:
             numio = float(input('Enter an angle in radians: '))
@@ -75,4 +76,4 @@ def trig(mode):
         if numio != 0.0:
             return 1/(numpy.tan(numio))
         else:
-            return 'ERROR: can not divide by 0' 
+            return 'ERROR: can not divide by 0'
