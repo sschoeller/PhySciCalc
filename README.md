@@ -6,7 +6,7 @@
 
 ## Requirements:
 
-- [Python 3](https://) or later
+- [Python 3](https://www.python.org) or later
 - [f2py](http://www.f2py.com/) wrapper: a command line tool for binding Python and Fortran code
 
 ### Set up development environment
