@@ -24,16 +24,20 @@ def run():
         mode = input('Enter an input mode.  Type the word modes for list of modes. type the letter e to exit. ')
         if mode == 'modes':
             print('\nThe following modes are available\n')
-            print('\tadd, sub, mul, div, sqrt')
+            print('\tadd, sub, mult') # div and sqrt are planned
             print('\tsin, cos, tan, sec, csc, cot')
-            print('\tsinh, cosh, tanh')
-            #print('\tgmol (g/mol conversion)')
-            #print('\tre (relatevistic rest energy)')
+            #print('\tsinh, cosh, tanh')
+            print('\tgmol (g/mol conversion)')
+            print('\tre (relativistic rest energy)')
 
         elif (mode == 'add' or mode == 'sub' or mode == 'mult' or mode == 'div' or mode == 'sqrt'):
             print(calcModes.arith(mode))
-
         elif (mode == 'sin' or mode == 'cos' or mode == 'tan' or mode == 'cot' or mode == 'sec' or mode == 'csc'):
             print(calcModes.trig(mode))
-
+        # calls for scientific calculations below
+        elif mode == 'gmol':
+            print(calcModes.gmol())
+        elif mode == 're':
+            print(calcModes.re())
+            
 run()
