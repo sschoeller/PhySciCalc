@@ -40,6 +40,36 @@ def arith(mode):
                 numio = numio + number
         return numio
 
+    elif mode == 'sub':
+        while done == '':
+            try:
+                numio = float(input('Type a non-zero number to subtract or simply enter 0 to compute and exit: '))
+                if numio != 0.0: # subtracting anything by 0 does not affect the final result
+                    num.append(numio)
+                else:
+                    break
+            except ValueError:
+                continue # handles input that can't be converted
+
+        for number in num:
+                numio = number - numio
+        return numio
+
+    elif mode == 'mult':
+        while done == '':
+            try:
+                numio = float(input('Type a non-zero number to multiply or simply enter 0 to compute and exit: '))
+                if numio != 0.0: # multiplying anything by 0 is from 0
+                    num.append(numio)
+                else:
+                    break
+            except ValueError:
+                continue # handles input that can't be converted
+
+        for number in num:
+                numio = numio * number
+        return numio
+
 def trig(mode):
     '''trig(mode) handles sin, cos, tan, cot, sec, csc'''
     numio = 0.0
@@ -77,3 +107,43 @@ def trig(mode):
             return 1/(numpy.tan(numio))
         else:
             return 'ERROR: can not divide by 0'
+
+    elif mode == 'sec':
+        try:
+            numio = float(input('Enter an angle in radians: '))
+        except ValueError:
+            return 'ERROR: invalid input!'
+        # if ValueError *NOT* encountered
+        if numio != 0.0:
+            return 1/(numpy.cos(numio))
+        else:
+            return 'ERROR: can not divide by 0'
+
+    elif mode == 'csc':
+        try:
+            numio = float(input('Enter an angle in radians: '))
+        except ValueError:
+            return 'ERROR: invalid input!'
+        # if ValueError *NOT* encountered
+        if numio != 0.0:
+            return 1/(numpy.sin(numio))
+        else:
+            return 'ERROR: can not divide by 0'
+
+# Scientific modes below this point
+def gmol():
+        try:
+            grams = float(input('Enter grams of material: '))
+            MW = float(input('Enter MW of material: '))
+            numio = ext_mod.gmol(grams, MW)
+            return numio
+        except ValueError:
+            return 'ERROR: invalid input!'
+
+def re():
+    try:
+        kilograms = float(input('Enter mass of object (in kg): '))
+        numio = ext_mod.re(kilograms)
+        return numio
+    except ValueError:
+        return 'ERROR: invalid input!'

@@ -17,6 +17,8 @@
 MODULE ext_mod
 
 implicit none
+! constants section
+real, parameter :: c = 299792458 ! speed of light, in m/s
 
 contains
 
@@ -30,5 +32,15 @@ function gmol(grams, MW) ! g->mol conversions
   result = grams/MW
   write (*,*) result
 end function gmol
+
+function re(kg) ! E = kg*c^2
+  real :: re
+
+  real :: kg ! mass of object in kg
+  real :: result ! result of calculation
+
+  result = kg*(c**2)
+  write (*,*) result
+end function re
 
 END MODULE ext_mod
