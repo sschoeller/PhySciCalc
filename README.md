@@ -36,14 +36,22 @@ python physcicalc.py
 - add: Addition
 - sub: Subtraction
 - mul: Multiplication
-- div: Division
-- sqrt: Square root
 - sin: Sine
 - cos: Cosine
 - tan: Tangent
 - sec: Secant
 - csc: Cosecant
 - cot: Cotangent
+
+### Physical science operations
+
+- Chemistry: g->mol conversion
+- Physics: Rest energy (E=mc^2)
+
+## Planned operations
+
+- div: Division
+- sqrt: Square root
 - sinh: Hyperbolic sine of a number
 - cosh: Hyperbolic cosine of a number
 - tanh: Hyperbolic tangent of a number
