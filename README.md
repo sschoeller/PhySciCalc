@@ -36,6 +36,8 @@ python physcicalc.py
 - add: Addition
 - sub: Subtraction
 - mul: Multiplication
+- div: Division
+- sqrt: Square root
 - sin: Sine
 - cos: Cosine
 - tan: Tangent
@@ -50,8 +52,6 @@ python physcicalc.py
 
 ## Planned operations
 
-- div: Division
-- sqrt: Square root
 - sinh: Hyperbolic sine of a number
 - cosh: Hyperbolic cosine of a number
 - tanh: Hyperbolic tangent of a number

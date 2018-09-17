@@ -24,7 +24,7 @@ def run():
         mode = input('Enter an input mode.  Type the word modes for list of modes. type the letter e to exit. ')
         if mode == 'modes':
             print('\nThe following modes are available\n')
-            print('\tadd, sub, mult') # div and sqrt are planned
+            print('\tadd, sub, mult, div, sqrt')
             print('\tsin, cos, tan, sec, csc, cot')
             #print('\tsinh, cosh, tanh')
             print('\tgmol (g/mol conversion)')
