@@ -70,6 +70,21 @@ def arith(mode):
                 numio = numio * number
         return numio
 
+    elif mode == 'div':
+                num = float(input('Enter any number: '))
+                divnum = float(input('Enter a non-zero number to divide by or simply enter 0 to cancel: '))
+                if divnum != 0.0: # can't divide by 0
+                    return num/divnum
+                else:
+                    return 0.0
+    elif mode == 'sqrt': # make sure to handle complex numbers
+        try:
+            numio = complex(input('Enter any number: '))
+        except ValueError:
+            return 'Error: invalid input!'
+        # else, return the sqrt
+        return numpy.sqrt(numio)
+
 def trig(mode):
     '''trig(mode) handles sin, cos, tan, cot, sec, csc'''
     numio = 0.0
