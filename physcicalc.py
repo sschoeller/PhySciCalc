@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 #**********************************************************************
 # physcicalc.py
-# Copyright (C) 2018 Scott Schoeller (sschoellerSTEM)
+# Copyright (C) 2018 - 2019 Scott Schoeller (sschoellerSTEM)
 #
 # This file is part of PhySciCalc
 # PhySciCalc is free software: you can redistribute it and/or modify
@@ -15,7 +15,10 @@
 # You should have received a copy of the GNU General Public License
 # along with PhySciCalc.  If not, see <https://www.gnu.org/licenses/>.
 #**********************************************************************
-import calcModes
+
+from calcModes import calcModes
+
+calc = calcModes()
 
 def run():
     # prompt for mode or mode listing
@@ -31,13 +34,13 @@ def run():
             print('\tre (relativistic rest energy)')
 
         elif (mode == 'add' or mode == 'sub' or mode == 'mult' or mode == 'div' or mode == 'sqrt'):
-            print(calcModes.arith(mode))
+            print(calc.arith(mode))
         elif (mode == 'sin' or mode == 'cos' or mode == 'tan' or mode == 'cot' or mode == 'sec' or mode == 'csc'):
-            print(calcModes.trig(mode))
+            print(calc.trig(mode))
         # calls for scientific calculations below
         elif mode == 'gmol':
-            print(calcModes.gmol())
+            print(calc.gmol())
         elif mode == 're':
-            print(calcModes.re())
+            print(calc.re())
             
 run()
