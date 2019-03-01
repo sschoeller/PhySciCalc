@@ -48,6 +48,7 @@ python physcicalc.py
 ### Physical science operations
 
 - Chemistry: g->mol conversion
+- Physics: Kinetic Energy, classical formula (KE=0.5*mv^2) - Python Integration In Progress
 - Physics: Rest energy (E=mc^2)
 
 ## Planned operations

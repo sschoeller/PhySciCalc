@@ -1,6 +1,6 @@
 !**********************************************************************
 ! ext_mod.f90
-! Copyright (C) 2018 Scott Schoeller (sschoellerSTEM)
+! Copyright (C) 2018 - 2019 Scott Schoeller (sschoellerSTEM)
 !
 ! This file is part of PhySciCalc
 ! PhySciCalc is free software: you can redistribute it and/or modify
@@ -32,6 +32,17 @@ function gmol(grams, MW) ! g->mol conversions
   result = grams/MW
   write (*,*) result
 end function gmol
+
+function ke(kg, v) ! KE = 0.5*kg*v^2
+  real :: ke
+
+  real :: kg ! mass of object in kg
+  real :: v ! velocity in m/s
+  real :: result ! result of calculation
+
+  result = 0.5*kg*(v**2)
+  write (*,*) result
+end function ke
 
 function re(kg) ! E = kg*c^2
   real :: re
